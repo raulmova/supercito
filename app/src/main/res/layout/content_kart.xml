@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="Views.Kart"
+    tools:showIn="@layout/activity_kart">
+
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_alignParentStart="true">>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/numberPicker" />
+        <Spinner
+            android:id="@id/numberPicker"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toLeftOf="@+id/bAdd"
+            />
+
+        <Button
+            android:id="@+id/bAdd"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/numberPicker"
+            android:layout_alignParentRight="true"
+            android:text="Add"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvKart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@+id/bAdd" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
